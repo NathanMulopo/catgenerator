@@ -3,11 +3,11 @@ const noBtn = document.querySelector('.no-btn');
 const gif = document.querySelector('.gif');
 
 const API_KEY = '8jK5zPqTj4iQW7rbth5NOaAcReeGazDG';  // Your actual API key
-const API_URL = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=cat&rating=g`;
+const API_URL = () => `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=cat&rating=g&timestamp=${new Date().getTime()}`;
 
 yesBtn.addEventListener('click', async () => {
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(API_URL());
         const data = await response.json();
         
         if (data.data && data.data.images) {
@@ -36,5 +36,6 @@ noBtn.addEventListener('mouseover', () => {
     noBtn.style.left = `${randomX}px`;
     noBtn.style.top = `${randomY}px`;
 });
+
 
 
