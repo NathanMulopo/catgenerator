@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+}
+
+.wrapper {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.yes-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.no-btn {
+    background-color: #FF4444;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
